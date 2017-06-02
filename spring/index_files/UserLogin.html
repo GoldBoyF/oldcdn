@@ -1,0 +1,66 @@
+
+<!-- saved from url=(0043)http://www.bhsx.cn/UserLogin.asp?ShowType=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<title>会员登录</title>
+
+<style type="text/css">
+<!--*{padding:0px;border:0px;margin:0px}
+input{background:#ffffff;border:#dfdfdf 1px solid;color:#464646;height:18px;border-color:#c8c8c8 #c8c8c8 #c8c8c8 #c8c8c8;font-size:12px;}
+.input1{border:#dfdfdf 0px solid;width:47px;height:19px;}
+td{font-family:宋体;font-size:12px;line-height:130%;color:#464646;}
+a{text-decoration:none;}
+a:link{color:#464646;}
+a:visited{color:#464646;}
+a:hover{color:#ff0000;}
+a:active{color:#464646;}
+-->
+</style>
+<!--增加使userlogin.asp不能脱离框架结构的判断 >
+<script language="javascript">
+if(self==top){self.location.href="index.asp";}
+</script>
+<完毕-->
+<!--完毕-->
+</head>
+<body bgcolor="#fff8de" leftmargin="0" topmargin="0">
+<table align="center" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <form action="http://www.bhsx.cn/User/User_ChkLogin.asp" method="post" name="UserLogin" onsubmit="return CheckLoginForm();" target="_top"></form>
+    <tbody><tr>
+        <td height="25" align="right">用户名：</td><td height="25"><input name="UserName" type="text" id="UserName" size="16" maxlength="20" style="width:110px;"></td>
+    </tr>
+    <tr>
+        <td height="25" align="right">密&nbsp;&nbsp;码：</td><td height="25"><input name="UserPassword" type="password" id="Password" size="16" maxlength="20" style="width:110px;"></td>
+    </tr>
+    <tr>
+        <td height="25" align="right">验证码：</td><td height="25"><input name="CheckCode" type="text" id="CheckCode" size="6" maxlength="6"><a href="javascript:refreshimg()" title="看不清楚，换个图片"><img id="checkcode" src="./checkcode.asp" style="border: 1px solid #ffffff"></a></td>
+    </tr>
+    <tr>
+        <td height="25" colspan="2" align="center">
+            <input type="checkbox" name="CookieDate" value="3">永久登录 <input type="hidden" name="ComeUrl" value="http://www.bhsx.cn/Index.asp">
+            <input name="Login" type="submit" id="Login" value=" 登 录 ">
+        <br><br>
+<a href="http://www.bhsx.cn/Reg/User_Reg.asp" target="_blank">新用户注册</a>&nbsp;&nbsp;<a href="http://www.bhsx.cn/User/User_GetPassword.asp" target="_blank">忘记密码？</a></td>
+</tr></tbody></table>
+<script language="javascript">
+function refreshimg(){document.all.checkcode.src='../Inc/CheckCode.asp?'+Math.random();}
+   function CheckLoginForm(){
+       if(document.UserLogin.UserName.value==''){
+           alert('请输入用户名！');
+           document.UserLogin.UserName.focus();
+           return false;
+       }
+       if(document.UserLogin.Password.value == ''){
+           alert('请输入密码！');
+           document.UserLogin.Password.focus();
+           return false;
+       }
+       if(document.UserLogin.CheckCode.value == ''){
+           alert('请输入验证码！');
+           document.UserLogin.CheckCode.focus();
+           return false;
+       }
+   }
+</script>
+
+
+</body></html>

@@ -1,0 +1,103 @@
+body {
+    background: linear-gradient(#66CCFF, #FFCCCC);
+}
+
+.header {
+    background: url(../../img/1.jpg) no-repeat center;
+    background-size: 100% 100%;
+    height: 200px;
+}
+
+.my-site {
+    margin: 0;
+    .panel-body {
+        text-align: center;
+    }
+}
+
+.my-news-more {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.my-news-item-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.my-padding-fix-0 {
+    padding: 0;
+}
+
+.footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-top: 1px solid #eee;
+}
+
+.nav-justified {
+    background-color: #eee;
+    border: 1px solid #ccc;
+}
+
+.nav-justified > li > a {
+    margin-bottom: 0;
+    font-weight: bold;
+    color: #777;
+    text-align: center;
+    background-color: #e5e5e5;
+}
+
+.nav-justified > .active > a,
+.nav-justified > .active > a:hover,
+.nav-justified > .active > a:focus {
+    background-color: #ddd;
+    background-image: none;
+    -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .15);
+    box-shadow: inset 0 3px 7px rgba(0, 0, 0, .15);
+}
+
+.nav-justified > li:last-child > a {
+    border-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .nav-justified {
+        max-height: 52px;
+    }
+
+    .nav-justified > li > a {
+        border-right: 1px solid #d5d5d5;
+        border-left: 1px solid #fff;
+    }
+
+    .nav-justified > li:first-child > a {
+        border-left: 0;
+    }
+
+    .nav-justified > li:last-child > a {
+        border-right: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.twinkling {
+    animation: twinkling 1s infinite ease-in-out;
+}
+
+@keyframes twinkling {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
